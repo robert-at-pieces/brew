@@ -283,7 +283,7 @@ module Utils
 
       [[], get_retry_args].each do |request_args|
         result = curl_output(
-          "--fail", "--location", "--silent", "--head", *request_args, *args,
+          "--fail", "--location", "--head", *request_args, *args,
           **options
         )
 
