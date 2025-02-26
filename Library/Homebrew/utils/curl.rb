@@ -130,7 +130,7 @@ module Utils
         args << "--fail"
         args << "--progress-bar" unless Context.current.verbose?
         args << "--verbose" if Homebrew::EnvConfig.curl_verbose?
-        args << "--silent" if !$stdout.tty? || Context.current.quiet?
+        args << "--silent" if Context.current.quiet?
       end
 
       args << "--connect-timeout" << connect_timeout.round(3) if connect_timeout.present?
